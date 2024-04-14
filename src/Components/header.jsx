@@ -22,7 +22,11 @@ export default function Header() {
             <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
                 <a href="#" className="nav-link text-secondary">
-                  <svg className="bi d-block mx-auto mb-1" width="24" height="24">
+                  <svg
+                    className="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                  >
                     <use xlinkHref="#home"></use>
                   </svg>
                   Home
@@ -30,7 +34,11 @@ export default function Header() {
               </li>
               <li>
                 <a href="#" className="nav-link text-white">
-                  <svg className="bi d-block mx-auto mb-1" width="24" height="24">
+                  <svg
+                    className="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                  >
                     <use xlinkHref="#speedometer2"></use>
                   </svg>
                   Dashboard
@@ -38,26 +46,14 @@ export default function Header() {
               </li>
               <li>
                 <a href="#" className="nav-link text-white">
-                  <svg className="bi d-block mx-auto mb-1" width="24" height="24">
+                  <svg
+                    className="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                  >
                     <use xlinkHref="#table"></use>
                   </svg>
                   Orders
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link text-white">
-                  <svg className="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlinkHref="#grid"></use>
-                  </svg>
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link text-white">
-                  <svg className="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlinkHref="#people-circle"></use>
-                  </svg>
-                  Customers
                 </a>
               </li>
             </ul>

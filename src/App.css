@@ -1,5 +1,6 @@
 .slider_header {
   display: flex;
+  flex-wrap: nowrap;
 }
 .content {
   width: 100%;
@@ -9,19 +10,22 @@
 }
 
 .post-card {
- 
   margin: 15px 20px;
   padding: 10px;
 }
-.hashtag{
-  margin:0px 2px;
+.hashtag {
+  margin: 0px 2px;
 }
 
-form{
-  margin:10px 10px;
+.create-post {
+  margin-left: 10%;
+  width: 80%;
 }
 
-.Post_body{
+.Post_body {
   display: flex;
   justify-content: center;
+}
+.text-small {
+  min-width: 500px;
 }

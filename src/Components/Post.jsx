@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { RiDeleteBack2Fill } from "react-icons/ri";
 
-import { postListData } from "../store/post-list-store"; 
+import { postListData } from "../store/post-list-store";
 export default function Post({ post }) {
   const { deletePost } = useContext(postListData);
-  
+
   return (
     <div className="Post_body">
       <div className="card post-card" style={{ width: "18rem" }}>

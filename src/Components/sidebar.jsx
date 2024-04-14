@@ -3,7 +3,7 @@ export default function Sidebar({ selectedTab, setSelectedTab }) {
     <>
       <div
         className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
-        style={{ width: " 280px" }}
+        style={{ width: " 200px" }}
       >
         <a
           href="/"
