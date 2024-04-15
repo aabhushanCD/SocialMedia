@@ -1,7 +1,8 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Post from "./Post";
 import { postListData } from "../store/post-list-store";
 import Welcome from "./Welcome";
+import Loading from "./loading";
 export default function PostList() {
   const { postList, addPostApi } = useContext(postListData);
 
@@ -12,14 +13,18 @@ export default function PostList() {
   //       addPostApi(data.posts);
   //     });
   // };
+  const [fetching, setfetching] = useState(false);
 
   useEffect(() => {
+    setfetching(true);
     fetch("https://dummyjson.com/posts")
       .then((res) => res.json())
       .then((data) => {
         addPostApi(data.posts);
+        setfetching(false);
       });
   }, []);
+
   return (
     <>
       {/* this is for handleonclick function */}
@@ -34,10 +39,9 @@ export default function PostList() {
     4 (nothing) also can pass it means run initially and every paint cycle run
 
       */}
-      {postList.length === 0 && <Welcome> </Welcome>}
-      {postList.map((post) => (
-        <Post key={post.id} post={post} />
-      ))}
+      {fetching && <Loading />}
+      {!fetching && postList.length === 0 && <Welcome> </Welcome>}
+      {!fetching && postList.map((post) => <Post key={post.id} post={post} />)}
     </>
   );
 }
